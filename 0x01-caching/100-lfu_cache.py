@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-""" This module contains the class LFUCache """
+"""module contains the class LFUCache """
 from base_caching import BaseCaching
 from datetime import datetime
 
 
 def get_all_least_frequent(cache_frequency, least_frequent):
-    """ Retrieves all keys with least frequency """
+    """ Retrieves all the keys with least frequency """
     
     least_frequent_keys = []
     for key, value in cache_frequency.items():
@@ -15,17 +15,17 @@ def get_all_least_frequent(cache_frequency, least_frequent):
 
 
 class LFUCache(BaseCaching):
-    """ This class implements a LFU caching system """
+    """class implements a LFU caching system """
     
     def __init__(self):
-        """ Initialize class instance """
+        """ Initialize instance """
         
         super().__init__()
         self.cache_queue = {}
         self.cache_frequency = {}
         
     def put(self, key, item):
-        """ Adds a new item to the cache dictionary """
+        """ Adds new item to the cache dictionary """
         
         if key and item:
             self.cache_data[key] = item
@@ -49,7 +49,7 @@ class LFUCache(BaseCaching):
             self.cache_queue[key] = datetime.now()
             
     def get(self, key):
-        """ Retrieves the item associated with key """
+        """ Retrieves item associated with key """
         
         if key and key in self.cache_data:
             self.cache_frequency[key] += 1

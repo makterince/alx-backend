@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" This module contains a class named Server. """
+"""module contains a class named Server. """
 import csv
 import math
 from typing import List, Dict, Tuple
@@ -7,10 +7,8 @@ from typing import List, Dict, Tuple
 
 def index_range(page: int, page_size: int, **kwargs: Dict[str, int]) -> Tuple:
     """
-        This function The function should return a tuple of size two
-        containing a start index and an end index corresponding to the
-        range of indexes to return in a list for those particular
-        pagination parameters.
+        The function should return a tuple of size two
+        containing a start index and an end index.
     """
     
     if kwargs:
@@ -21,7 +19,7 @@ def index_range(page: int, page_size: int, **kwargs: Dict[str, int]) -> Tuple:
 
 
 class Server:
-    """Server class to paginate a database of popular baby names.
+    """Server class.
     """
     DATA_FILE = "Popular_Baby_Names.csv"
     
@@ -40,7 +38,7 @@ class Server:
     return self.__dataset
 
 def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-    """ Finds the correct indexes to paginate dataset correctly """
+    """ Finds the correct indexes """
     
     assert type(page) == int and page > 0
     assert type(page_size) == int and page > 0

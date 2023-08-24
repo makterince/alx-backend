@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
-""" This module contains the class LRUCache """
+"""module contains the class LRUCache """
 from base_caching import BaseCaching
 from datetime import datetime
 
 
 class LRUCache(BaseCaching):
-    """ This class implements a LRU caching system """
+    """class implements a LRU caching system """
     
     def __init__(self):
-        """ Initialize class instance """
+        """ Initialize instance """
         
         super().__init__()
         self.cache_queue = {}
         
     def put(self, key, item):
-        """ Adds a new item to the cache dictionary """
+        """ Adds new item to the cache dictionary """
         
         if key and item:
             self.cache_data[key] = item

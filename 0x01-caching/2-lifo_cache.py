@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-""" This module contains the class LIFOCache """
+"""module contains the class LIFOCache """
 from base_caching import BaseCaching
 
 
 class LIFOCache(BaseCaching):
-    """ This class implements a LIFO caching system """
+    """class implements a LIFO caching system """
     
     def __init__(self):
-        """ Initialize class instance """
+        """ Initialize instance """
         
         super().__init__()
         self.cache_queue = []
         
     def put(self, key, item):
-        """ Adds a new item to the cache dictionary """
+        """ Adds new item to the cache dictionary """
         
         if key and item:
             self.cache_data[key] = item

@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-""" This module contains the class FIFOCache """
+"""module contains the class FIFOCache """
 from base_caching import BaseCaching
 
 
 class FIFOCache(BaseCaching):
-        """ This class implements a FIFO caching system """
+        """ class implements a FIFO caching system """
         
         def __init__(self):
-            """ Initialize class instance """
+            """ Initialize instance """
             
             super().__init__()
             self.cache_queue = []
             
         def put(self, key, item):
-            """ Adds a new item to the cache dictionary """
+            """ Adds a new item to the dictionary """
             
             if key and item:
                 self.cache_data[key] = item

@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
-""" This module contains the class MRUCache """
+"""module contains the class MRUCache """
 from base_caching import BaseCaching
 from datetime import datetime
 
 
 class MRUCache(BaseCaching):
-    """ This class implements a MRU caching system """
+    """class implements a MRU caching system """
     
     def __init__(self):
-        """ Initialize class instance """
+        """ Initialize instance """
         
         super().__init__()
         self.cache_queue = {}
     
     def put(self, key, item):
-        """ Adds a new item to the cache dictionary """
+        """ Adds new item to the cache dictionary """
         
         if key and item:
             self.cache_data[key] = item
@@ -26,7 +26,7 @@ class MRUCache(BaseCaching):
             self.cache_queue[key] = datetime.now()
             
     def get(self, key):
-        """ Retrieves the item associated with key """
+        """ Retrieves item associated with key """
         
         if key and key in self.cache_data:
             self.cache_queue[key] = datetime.now()
